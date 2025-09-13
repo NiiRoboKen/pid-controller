@@ -12,7 +12,7 @@ P, I, D ゲインの設定が可能
 1. インスタンス生成
 
 ```cpp
-#include "Pid.hpp"
+#include "PID.hpp"
 
 // ゲイン(Kp, Ki, Kd)を指定して初期化
 Pid pid(1.0, 0.5, 0.1);
