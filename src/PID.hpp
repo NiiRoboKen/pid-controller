@@ -20,8 +20,8 @@ class Pid {
   //dt[ms]
   void update(double currentValue, double dt) {
     this->error = this->target - currentValue;
-    this->integral += this->error * dt;
-    this->derivative = (this->error - this->prevError) / dt;
+    this->integral += this->error * dt / 1000;
+    this->derivative = (this->error - this->prevError) / dt * 1000;
     this->output  = this->Kp * this->error 
                   + this->Ki * this->integral 
                   + this->Kd * this->derivative;
